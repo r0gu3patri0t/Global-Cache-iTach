@@ -1,0 +1,13 @@
+script:
+  cycle_garage_door:
+    sequence:
+      - service: notify.ip2sl
+        data:
+          message: "setstate,1:1,1"
+
+      - delay:
+          seconds: 1
+
+      - service: notify.ip2sl
+        data:
+          message: "setstate,1:1,0"
